@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS account;
+CREATE TABLE account (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(80) UNIQUE NOT NULL,
+    password VARCHAR(80) NOT NULL,
+    email VARCHAR(80) UNIQUE NOT NULL,
+    creation_date TIMESTAMP WITH TIME ZONE DEFAULT now()
+);
